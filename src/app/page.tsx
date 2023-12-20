@@ -24,7 +24,7 @@ export default function Home() {
 
                                 Oud carries a rich and distinct fragrance, often described as woody, sweet, and balsamic. Similarly, your work with Typescript may bring a unique touch to your projects, infusing them with the essence of structured and statically-typed code. Just as oud leaves a lasting impression, your contributions in the development world contribute to the creation of software that stands the test of time.
 
-                                In the realm of casual appreciation, exploring the world of oud can be a delightful sensory experience. Likewise, your coding endeavors in Typescript may bring a sense of satisfaction and enjoyment as you navigate the digital landscape with ease and creativity. Whether it's the allure of oud or the elegance of your code, both are expressions of a thoughtful and nuanced craft.
+                                In the realm of casual appreciation, exploring the world of oud can be a delightful sensory experience. Likewise, your coding endeavors in Typescript may bring a sense of satisfaction and enjoyment as you navigate the digital landscape with ease and creativity. Whether it&apos;s the allure of oud or the elegance of your code, both are expressions of a thoughtful and nuanced craft.
                             </p>
                         </div>
                     </div>

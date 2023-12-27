@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const logo = require('./favicon.svg')
-
-const inter = Inter({ subsets: ['latin'] })
+const poppings = Poppins({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
   title: 'Muji Jaya Gaharu',
@@ -24,7 +22,7 @@ export default function RootLayout({
         <title>Muji Jaya Gaharu - Your finest oud made by nature</title>
         <link rel="icon" href='/favicon.png' type="image/png"></link>
       </head>
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
+      <body className={`${poppings.className} flex flex-col min-h-screen`}>
         <Header />
         <div className='flex-1'>
           {children}

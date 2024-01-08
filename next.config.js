@@ -9,6 +9,11 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'placehold.co',
+                port: '',
+            },
+            {
+                protocol: 'https',
                 hostname: '*.depositphotos.com',
                 port: '',
             },

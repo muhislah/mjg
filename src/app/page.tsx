@@ -6,14 +6,14 @@ import { Button, Card, CardBody, CardFooter, CardHeader, Image as NextImage } fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { useEffect, useState } from 'react';
-import { getImagesInFolder, sendWhatsApp } from '@/utils/helper';
+import { sendWhatsApp } from '@/utils/helper';
 import { useRouter } from 'next/navigation';
 import Title from './components/Title';
 import { useLangContext } from '@/context/useLangContext';
-import { cld } from '@/configs/cloudinary';
 
 export default function Home() {
     const router = useRouter()
+    const { lang } = useLangContext()
     
     return (
         <main className=''>

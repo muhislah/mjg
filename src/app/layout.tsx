@@ -4,7 +4,7 @@ import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { Providers } from './provider'
-import { useLang } from '@/lang/helper'
+import { LangContextProvider } from '@/context/useLangContext'
 
 const poppings = Poppins({ subsets: ['latin'], weight: '400' })
 
@@ -25,15 +25,17 @@ export default function RootLayout({
                 <link rel="icon" href='/favicon.png' type="image/png"></link>
             </head>
             <body className={`${poppings.className}`}>
-                <Providers>
-                    <div className='flex flex-col min-h-screen'>
-                        <Header />
-                        <div className='flex-1 bg-white md:text-base text-sm text-stone-500'>
-                            {children}
+                <LangContextProvider>
+                    <Providers>
+                        <div className='flex flex-col min-h-screen'>
+                            <Header />
+                            <div className='flex-1 bg-white md:text-base text-sm text-stone-500'>
+                                {children}
+                            </div>
+                            <Footer />
                         </div>
-                        <Footer />
-                    </div>
-                </Providers>
+                    </Providers>
+                </LangContextProvider>
             </body>
         </html>
     )

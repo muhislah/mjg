@@ -6,12 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 import { links } from "@/configs/links";
 import { usePathname } from "next/navigation";
-import { useLang } from "@/lang/helper";
+import { useLangContext } from "@/context/useLangContext";
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const pathname = usePathname()
-    const { langCode, setLangCode, lang } = useLang()
+    const { lang, langCode, setLangCode } = useLangContext()
 
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="shadow-md">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useLang } from '@/lang/helper'
+import { useLangContext } from '@/context/useLangContext';
 import { faLeaf, faTree } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
@@ -8,7 +8,8 @@ import React from 'react'
 type Props = {}
 
 const Footer = (props: Props) => {
-    const { lang } = useLang()
+    const { lang } = useLangContext()
+    
     return (
         <footer className='bg-white text-stone-500 top-0 left-0 right-0 flex flex-col'>
             <div className='md:mx-auto w-full md:max-w-screen-lg py-4 flex flex-row justify-center items-center'>

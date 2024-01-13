@@ -4,12 +4,12 @@
 import Image from 'next/image'
 import React from 'react'
 import Title from '../components/Title'
-import { useLang } from '@/lang/helper'
+import { useLangContext } from '@/context/useLangContext';
 
 type Props = {}
 
 const AboutPage = (props: Props) => {
-    const {lang} = useLang()
+    const {lang} = useLangContext()
 
     return (
         <div className='md:max-w-5xl md:mx-auto mx-5'>

@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Avatar } from '@nextui-org/react';
 import React from 'react'
 import Title from '../components/Title';
-import { useLang } from '@/lang/helper';
+import { useLangContext } from '@/context/useLangContext';
 
 type Props = {}
 
 const ContactPage = (props: Props) => {
-    const { lang } = useLang()
+    const { lang } = useLangContext()
 
     const handleSendEmail = (text: string = '') => {
         const toEmail = 'mujijayagaharu01@gmail.com';

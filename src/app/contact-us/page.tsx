@@ -6,6 +6,7 @@ import { Avatar } from '@nextui-org/react';
 import React from 'react'
 import Title from '../components/Title';
 import { useLangContext } from '@/context/useLangContext';
+import images from '@/database/image.json'
 
 type Props = {}
 
@@ -29,7 +30,7 @@ const ContactPage = (props: Props) => {
             <div className='py-10'>
                 <Title>{lang['contact_us']}</Title>
                 <div className='text-base py-5 flex flex-col gap-5'>
-                    <Avatar src="https://i.pravatar.cc/150?u=a04258114e29026708c" className="w-28 h-28 text-large mx-auto" />
+                    <Avatar src={images.profile} className="w-28 h-28 text-large mx-auto" />
                     <div className='flex flex-col items-center justify-center'>
                         <p className='text-xl font-bold'>Aji Febriyanto</p>
                         <p>

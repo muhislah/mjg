@@ -17,6 +17,11 @@ const nextConfig = {
                 hostname: '*.depositphotos.com',
                 port: '',
             },
+            {
+                protocol: 'https',
+                hostname: '*.cloudinary.com',
+                port: ''
+            }
         ],
     },
 }

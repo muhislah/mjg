@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import Title from '../components/Title'
 import { useLangContext } from '@/context/useLangContext';
+import images from '@/database/image.json'
 
 type Props = {}
 
@@ -21,7 +22,7 @@ const AboutPage = (props: Props) => {
                             alt='about preview'
                             layout='fill'
                             objectFit='cover'
-                            src='https://cdn.pixabay.com/photo/2014/07/08/10/47/team-386673_1280.jpg'
+                            src={images.activity[7]}
                         />
                     </div>
                     <div className='flex-1'>

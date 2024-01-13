@@ -10,11 +10,12 @@ import { sendWhatsApp } from '@/utils/helper';
 import { useRouter } from 'next/navigation';
 import Title from './components/Title';
 import { useLangContext } from '@/context/useLangContext';
+import images from '@/database/image.json'
 
 export default function Home() {
     const router = useRouter()
     const { lang } = useLangContext()
-    
+
     return (
         <main className=''>
             <div className='block'>
@@ -60,55 +61,29 @@ export default function Home() {
                 <div className='md:mx-auto max-w-5xl mx-5'>
                     <Title>Our Product</Title>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-3 py-5'>
-                        <Card shadow="sm" >
-                            <CardBody className="overflow-visible p-0">
-                                <NextImage
-                                    shadow="sm"
-                                    radius="lg"
-                                    width="100%"
-                                    alt={"oud"}
-                                    className="w-full object-cover h-[300px]"
-                                    src={'https://res.cloudinary.com/muhislah/image/upload/v1705152420/Product/mx28tjsvu8wy2w1xf1lc.jpg'}
-                                />
-                            </CardBody>
-                            <CardFooter className="text-small justify-between">
-                                <b>Agarwood</b>
-                                <p className="text-default-500">Agarwood tree</p>
-                            </CardFooter>
-                        </Card>
+                        {
+                            images.product.map((url, idx) => (
+                                <Card shadow="sm" key={idx}>
+                                    <CardBody className="overflow-visible p-0">
+                                        <NextImage
+                                            shadow="sm"
+                                            radius="lg"
+                                            width="100%"
+                                            alt={"oud"}
+                                            className="w-full object-cover h-[300px]"
+                                            src={url}
+                                            loading='lazy'
+                                        />
+                                    </CardBody>
+                                    <CardFooter className="text-small justify-between">
+                                        <b>Oud Product</b>
+                                        <p className="text-default-500">Muji Jaya Gaharu</p>
+                                    </CardFooter>
+                                </Card>
+                            ))
+                        }
 
-                        <Card shadow="sm">
-                            <CardBody className="overflow-visible p-0">
-                                <NextImage
-                                    shadow="sm"
-                                    radius="lg"
-                                    width="100%"
-                                    alt={"oud"}
-                                    className="w-full object-cover h-[300px]"
-                                    src={'https://res.cloudinary.com/muhislah/image/upload/v1705152419/Product/n1k42qaqozmavmrmanj9.jpg'}
-                                />
-                            </CardBody>
-                            <CardFooter className="text-small justify-between">
-                                <b>Agarwood</b>
-                                <p className="text-default-500">Agarwood tree</p>
-                            </CardFooter>
-                        </Card>
-                        <Card shadow="sm">
-                            <CardBody className="overflow-visible p-0">
-                                <NextImage
-                                    shadow="sm"
-                                    radius="lg"
-                                    width="100%"
-                                    alt={"oud"}
-                                    className="w-full object-cover h-[300px]"
-                                    src={'https://res.cloudinary.com/muhislah/image/upload/v1705152416/Product/fgloougopepe6hjaflth.jpg'}
-                                />
-                            </CardBody>
-                            <CardFooter className="text-small justify-between">
-                                <b>Agarwood</b>
-                                <p className="text-default-500">Agarwood tree</p>
-                            </CardFooter>
-                        </Card>
+
                     </div>
                 </div>
             </div>

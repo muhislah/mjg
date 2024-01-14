@@ -16,10 +16,12 @@ export default function App() {
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen} className="shadow-md">
             <NavbarContent>
+                <div className="flex items-center justify-center">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
+                    className="sm:hidden w-10 h-10 bg-stone-600 text-white"
                 />
+                </div>
                 <Link href="/">
                     <NavbarBrand className="flex flex-col items-start">
                         <div className="flex flex-row items-center">

@@ -32,7 +32,7 @@ const ContactPage = (props: Props) => {
                 <div className='text-base py-5 flex flex-col gap-5'>
                     <Avatar src={images.profile} className="w-28 h-28 text-large mx-auto" />
                     <div className='flex flex-col items-center justify-center'>
-                        <p className='text-xl font-bold'>Aji Febriyanto</p>
+                        <p className='text-xl font-bold'>Abu Daffa</p>
                         <p>
                             <FontAwesomeIcon icon={faEnvelope} />
                             <span className='ml-2 underline cursor-pointer' onClick={() => handleSendEmail()}>mujijayagaharu01@gmail.com</span>

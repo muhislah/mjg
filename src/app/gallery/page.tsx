@@ -20,15 +20,17 @@ const GalleryPage = (props: Props) => {
                     <div className="grid gap-4" key={idx}>
                         {
                             images.filter((item, id) => (id > (idx * (rowLength) - 1) && id < ((idx + 1) * (rowLength)))).map((image) => (
-                                <Image
-                                    onClick={() => setSelectedImage(image)}
-                                    key={image}
-                                    isZoomed
-                                    className="h-full max-w-full rounded-lg"
-                                    src={image}
-                                    alt=""
-                                    loading='lazy'
-                                />
+                                <div>
+                                    <Image
+                                        onClick={() => setSelectedImage(image)}
+                                        key={image}
+                                        isZoomed
+                                        className="object-contain max-w-full rounded-lg"
+                                        src={image}
+                                        alt=""
+                                        loading='lazy'
+                                    />
+                                </div>
                             ))
                         }
                     </div>

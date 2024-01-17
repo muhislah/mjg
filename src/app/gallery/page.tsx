@@ -19,18 +19,34 @@ const GalleryPage = (props: Props) => {
                 {Array.from({ length: 4 }).map((section, idx) => (
                     <div className="grid gap-4" key={idx}>
                         {
-                            images.filter((item, id) => (id > (idx * (rowLength) - 1) && id < ((idx + 1) * (rowLength)))).map((image) => (
-                                <div key={image}>
-                                    <Image
-                                        onClick={() => setSelectedImage(image)}
-                                        isZoomed
-                                        className="object-contain max-w-full rounded-lg"
-                                        src={image}
-                                        alt=""
-                                        loading='lazy'
-                                    />
-                                </div>
-                            ))
+                            images.filter((item, id) => (id > (idx * (rowLength) - 1) && id < ((idx + 1) * (rowLength)))).map((image) => {
+                                if (image.endsWith('mp4')) {
+                                    return (
+                                        <div key={image}>
+                                            <video
+                                                onClick={() => setSelectedImage(image)}
+                                                className="object-contain max-w-full rounded-lg"
+                                                src={image}
+                                                autoPlay
+                                                muted
+                                            />
+                                        </div>
+                                    )
+                                } else {
+                                    return (
+                                        <div key={image}>
+                                            <Image
+                                                onClick={() => setSelectedImage(image)}
+                                                isZoomed
+                                                className="object-contain max-w-full rounded-lg"
+                                                src={image}
+                                                alt=""
+                                                loading='lazy'
+                                            />
+                                        </div>
+                                    )
+                                }
+                            })
                         }
                     </div>
                 ))}
@@ -66,9 +82,15 @@ const GalleryPage = (props: Props) => {
                             renderImage(image.activity)
                         }
                     </div>
+                    <Title>Another Gallery</Title>
+                    <div className='py-5'>
+                        {
+                            renderImage(image.other)
+                        }
+                    </div>
                 </div>
             </div>
-            <ImagePreview 
+            <ImagePreview
                 isOpen={!!selectedImage}
                 image={selectedImage}
                 onClose={() => {

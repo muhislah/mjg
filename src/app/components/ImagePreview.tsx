@@ -13,7 +13,7 @@ const ImagePreview = (props: Props) => {
     const closeButton = () => {
         return (
             <div className='relative -top-5'>
-                <FontAwesomeIcon icon={faClose}/>
+                <FontAwesomeIcon icon={faClose} />
             </div>
         )
     }
@@ -23,12 +23,21 @@ const ImagePreview = (props: Props) => {
                 {(onClose) => (
                     <>
                         <ModalBody className='z-[5] p-2'>
-                            <Image
-                                className="h-full w-full rounded-lg z-0"
-                                src={props.image}
-                                alt=""
-                                loading='lazy'
-                            />
+                            {
+                                props.image.endsWith('mp4') ?
+                                    <video
+                                        className="object-contain max-w-full rounded-lg"
+                                        src={props.image}
+                                        autoPlay
+                                        muted
+                                    /> :
+                                    <Image
+                                        className="h-full w-full rounded-lg z-0"
+                                        src={props.image}
+                                        alt=""
+                                        loading='lazy'
+                                    />
+                            }
                         </ModalBody>
                     </>
                 )}

@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import Title from './components/Title';
 import { useLangContext } from '@/context/useLangContext';
 import images from '@/database/image.json'
+import watermark from '@/assets/images/watermark.webp'
 
 export default function Home() {
     const router = useRouter()
@@ -65,15 +66,17 @@ export default function Home() {
                             images.product.map((url, idx) => (
                                 <Card shadow="sm" key={idx}>
                                     <CardBody className="overflow-visible p-0">
-                                        <NextImage
-                                            shadow="sm"
-                                            radius="lg"
-                                            width="100%"
-                                            alt={"oud"}
-                                            className="w-full object-cover h-[300px]"
-                                            src={url}
-                                            loading='lazy'
-                                        />
+                                        <div className='relative'>
+                                            <NextImage
+                                                shadow="sm"
+                                                radius="lg"
+                                                width="100%"
+                                                alt={"oud"}
+                                                className="w-full object-cover h-[300px]"
+                                                src={url}
+                                                loading='lazy'
+                                            />
+                                        </div>
                                     </CardBody>
                                     <CardFooter className="text-small justify-between">
                                         <b>Oud Product</b>

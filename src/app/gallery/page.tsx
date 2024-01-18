@@ -11,45 +11,83 @@ type Props = {}
 const GalleryPage = (props: Props) => {
     const [selectedImage, setSelectedImage] = useState('')
 
-    const renderImage = (images: string[]) => {
-        const rowLength = Math.floor(images.length / 4)
+    // const renderImage = (images: string[]) => {
+    //     const rowLength = Math.ceil(images.length / 4)
 
+    //     return (
+    //         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    //             {Array.from({ length: 4 }).map((section, idx) => (
+    //                 <div className="grid gap-4" key={idx}>
+    //                     {
+    //                         images.filter((item, id) => (id > (idx * (rowLength) - 1) && id < ((idx + 1) * (rowLength)))).map((image) => {
+    //                             if (image.endsWith('mp4')) {
+    //                                 return (
+    //                                     <div key={image}>
+    //                                         <video
+    //                                             onClick={() => setSelectedImage(image)}
+    //                                             className="object-contain max-w-full rounded-lg"
+    //                                             src={image}
+    //                                             autoPlay
+    //                                             muted
+    //                                         />
+    //                                     </div>
+    //                                 )
+    //                             } else {
+    //                                 return (
+    //                                     <div key={image}>
+    //                                         <Image
+    //                                             onClick={() => setSelectedImage(image)}
+    //                                             isZoomed
+    //                                             className="object-contain max-w-full rounded-lg"
+    //                                             src={image}
+    //                                             alt=""
+    //                                             loading='lazy'
+    //                                         />
+    //                                     </div>
+    //                                 )
+    //                             }
+    //                         })
+    //                     }
+    //                 </div>
+    //             ))}
+    //         </div>
+    //     )
+    // }
+
+    const renderImage = (images: string[]) => {
+        const rowLength = Math.ceil(images.length / 4)
         return (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {Array.from({ length: 4 }).map((section, idx) => (
-                    <div className="grid gap-4" key={idx}>
-                        {
-                            images.filter((item, id) => (id > (idx * (rowLength) - 1) && id < ((idx + 1) * (rowLength)))).map((image) => {
-                                if (image.endsWith('mp4')) {
-                                    return (
-                                        <div key={image}>
-                                            <video
-                                                onClick={() => setSelectedImage(image)}
-                                                className="object-contain max-w-full rounded-lg"
-                                                src={image}
-                                                autoPlay
-                                                muted
-                                            />
-                                        </div>
-                                    )
-                                } else {
-                                    return (
-                                        <div key={image}>
-                                            <Image
-                                                onClick={() => setSelectedImage(image)}
-                                                isZoomed
-                                                className="object-contain max-w-full rounded-lg"
-                                                src={image}
-                                                alt=""
-                                                loading='lazy'
-                                            />
-                                        </div>
-                                    )
-                                }
-                            })
+            <div className={`columns-2 md:columns-4 gap-4`}>
+                {
+                    images.map(image => {
+                        if (image.endsWith('mp4')) {
+                            return (
+                                <div key={image} className='mb-4'>
+                                    <video
+                                        onClick={() => setSelectedImage(image)}
+                                        className="object-contain max-w-full rounded-lg"
+                                        src={image}
+                                        autoPlay
+                                        muted
+                                    />
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div key={image} className='mb-4'>
+                                    <Image
+                                        onClick={() => setSelectedImage(image)}
+                                        isZoomed
+                                        className="object-contain max-w-full rounded-lg"
+                                        src={image}
+                                        alt=""
+                                        loading='lazy'
+                                    />
+                                </div>
+                            )
                         }
-                    </div>
-                ))}
+                    })
+                }
             </div>
         )
     }

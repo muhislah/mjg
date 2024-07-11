@@ -45,7 +45,7 @@ const ContactPage = (props: Props) => {
                 <div className='py-5'>
                     <iframe
                         className='w-full'
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1165.8219803426703!2d109.4709258802505!3d-6.986856633948766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdde64b034a8b%3A0xa9c0114af3312d5!2sCV.%20Muji%20Jaya%20Gaharu!5e0!3m2!1sid!2sid!4v1704724049831!5m2!1sid!2sid"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.783788161008!2d109.4717961!3d-6.9861847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdde64b034a8b%3A0xa9c0114af3312d5!2sPT.%20Muji%20Jaya%20Gaharu!5e0!3m2!1sid!2sid!4v1720675658260!5m2!1sid!2sid"
                         width="600"
                         height="450"
                         style={{ border: 0 }}

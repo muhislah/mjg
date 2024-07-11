@@ -16,6 +16,7 @@ export const metadata: Metadata = {
         name: 'Abu Daffa',
         url: 'https://oudmjg.com'
     },
+    icons: 'favicon.png'
 }
 
 export default function RootLayout({

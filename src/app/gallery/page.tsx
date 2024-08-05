@@ -120,6 +120,12 @@ const GalleryPage = (props: Props) => {
                             renderImage(image.activity)
                         }
                     </div>
+                    <Title>Marketing Office Gallery</Title>
+                    <div className='py-5'>
+                        {
+                            renderImage(image.marketing_office)
+                        }
+                    </div>
                     <Title>Another Gallery</Title>
                     <div className='py-5'>
                         {

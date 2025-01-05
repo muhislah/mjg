@@ -7,6 +7,8 @@ import React from 'react'
 import Title from '../components/Title';
 import { useLangContext } from '@/context/useLangContext';
 import images from '@/database/image.json'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { sendWhatsApp } from '@/utils/helper';
 
 type Props = {}
 
@@ -33,6 +35,10 @@ const ContactPage = (props: Props) => {
                     <Avatar src={images.profile} className="w-28 h-28 text-large mx-auto" />
                     <div className='flex flex-col items-center justify-center'>
                         <p className='text-xl font-bold'>Abu Daffa</p>
+                        <p>
+                            <FontAwesomeIcon icon={faWhatsapp} />
+                            <span className='ml-2 underline cursor-pointer' onClick={() => sendWhatsApp(`6285213133384`)}>+62852-1313-3384</span>
+                        </p>
                         <p>
                             <FontAwesomeIcon icon={faEnvelope} />
                             <span className='ml-2 underline cursor-pointer' onClick={() => handleSendEmail()}>mujijayagaharu01@gmail.com</span>

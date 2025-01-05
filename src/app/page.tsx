@@ -11,7 +11,6 @@ import { useRouter } from 'next/navigation';
 import Title from './components/Title';
 import { useLangContext } from '@/context/useLangContext';
 import images from '@/database/image.json'
-import watermark from '@/assets/images/watermark.webp'
 
 export default function Home() {
     const router = useRouter()
@@ -49,7 +48,7 @@ export default function Home() {
                             </Button>
                             <Button
                                 className='bg-green-600 text-white'
-                                onClick={() => sendWhatsApp(`6285225611505`)}
+                                onClick={() => sendWhatsApp(`6285213133384`)}
                             >
                                 <FontAwesomeIcon icon={faWhatsapp} />
                                 Whatsapp

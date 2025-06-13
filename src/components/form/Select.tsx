@@ -24,7 +24,7 @@ const Select = (props: Props) => {
             <select name={props.name} value={props.value} onChange={handleChange} id={props.name} className={`appearance-none relative pr-10 border text-sm rounded-lg ${props.error ? "bg-red-50 focus:ring-red-500 focus:border-red-500 border-red-500 text-red-900 placeholder-red-700" : "focus:ring-yellow-950 focus:border-neutral-800 border-neutral-700 text-neutral-900 bg-neutral-50 placeholder-neutral-600"} block w-full p-2.5 `}>
                 {
                     props.options.map((option, index) => (
-                        <option value={option.value}>{option.label}</option>
+                        <option key={index} value={option.value}>{option.label}</option>
                     ))
                 }
             </select>

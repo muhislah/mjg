@@ -1,5 +1,5 @@
+import React from 'react'
 import { INTERNATIONAL_PHONE_DIAL } from '@/utils/country-code'
-import React, { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa6'
 import classes from './PhoneInput.module.css'
 

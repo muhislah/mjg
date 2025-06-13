@@ -3,9 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { FaLeaf } from 'react-icons/fa6'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
     const { lang } = useLanguage()
     return (
         <footer className='bg-neutral-700 text-white top-0 left-0 right-0 flex flex-col'>

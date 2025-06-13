@@ -65,6 +65,7 @@ const Carousel = ({ show, children, sliderClass, isRepeatedProps, withIndicator,
         //         }
         //     }
         // }
+        // eslint-disable-next-line
     }, [state.activeIndex])
 
     const nextCard = () => {

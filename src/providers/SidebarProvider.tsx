@@ -40,7 +40,7 @@ const SidebarProvider = (props: IProps) => {
     )
 }
 
-const SidebarContext = createContext({
+const SidebarContext = createContext<Value>({
     isOpen: false,
     toggleOpen: () => { }
 })

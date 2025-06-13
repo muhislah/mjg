@@ -1,17 +1,13 @@
 import Avatar from '@/components/Avatar';
-import EnquiryForm from '@/components/EnquiryForm';
 import Master from '@/components/Master';
 import Title from '@/components/Title';
 import { useLanguage } from '@/providers/LanguageProvider';
 import { ALL_IMAGES, METAS } from '@/utils/constants';
 import { sendWhatsApp } from '@/utils/helper';
 import React from 'react'
-import { FaEnvelope, FaMapMarkedAlt, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
-import { FaMap, FaMapPin, FaMarker } from 'react-icons/fa6';
+import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 
-type Props = {}
-
-const ContactPage = (props: Props) => {
+const ContactPage = () => {
     const { lang, locale } = useLanguage()
     const handleSendEmail = (text: string = '') => {
         const toEmail = 'mujijayagaharu01@gmail.com';

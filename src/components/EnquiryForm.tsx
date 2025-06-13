@@ -35,7 +35,7 @@ const EnquiryForm = (props: Props) => {
     const [state, setState] = useState<IState>(initialState)
     const [error, setError] = useState<IValidationErrors>({})
     const handleChange = (name: string, value: string) => {
-        let val = name === 'phone' ? value.replace(/[^0-9]/g, "") : value
+        const val = name === 'phone' ? value.replace(/[^0-9]/g, "") : value
         setState(prev => ({
             ...prev,
             [name]: val

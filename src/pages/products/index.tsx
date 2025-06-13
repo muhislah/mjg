@@ -6,9 +6,7 @@ import { ALL_PRODUCT, METAS } from '@/utils/constants'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-type Props = {}
-
-const ProductsPage = (props: Props) => {
+const ProductsPage = () => {
     const { locale } = useLanguage()
     const [selectedProduct, setSelectedProduct] = useState('')
 

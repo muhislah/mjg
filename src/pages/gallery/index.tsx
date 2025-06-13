@@ -6,9 +6,7 @@ import { ALL_IMAGES, METAS } from '@/utils/constants'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-type Props = {}
-
-const GalleryPage = (props: Props) => {
+const GalleryPage = () => {
     const { locale } = useLanguage()
     const [selectedImage, setSelectedImage] = useState('')
 

@@ -5,9 +5,8 @@ import React from 'react'
 import { FaLeaf } from 'react-icons/fa6'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-type Props = {}
 
-const Header = (props: Props) => {
+const Header = () => {
     const { toggleOpen } = useSidebar()
     return (
         <div className='w-full shadow sticky top-0 z-10 bg-white/50 backdrop-blur-md'>

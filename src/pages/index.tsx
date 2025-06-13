@@ -9,16 +9,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import { FaHamburger, FaHandsHelping, FaWhatsapp } from 'react-icons/fa'
+import { FaHandsHelping, FaWhatsapp } from 'react-icons/fa'
 import { FaLeaf } from 'react-icons/fa6'
 import { FiAward } from 'react-icons/fi'
 import { GiHamburgerMenu, GiTreeBranch } from 'react-icons/gi'
 import { IoShieldCheckmarkOutline } from 'react-icons/io5'
 import { MdOutlineHistory, MdOutlineStarOutline } from 'react-icons/md'
 
-type Props = {}
-
-const index = (props: Props) => {
+const Homepage = () => {
 	const router = useRouter()
 	const { lang, locale } = useLanguage()
 	const { toggleOpen } = useSidebar()
@@ -163,7 +161,7 @@ const index = (props: Props) => {
 							>
 								{
 									ALL_IMAGES.product.map((image, key) => (
-										<div className='flex-shrink-0 relative rounded-3xl overflow-hidden min-h-[300px] w-full'>
+										<div key={key} className='flex-shrink-0 relative rounded-3xl overflow-hidden min-h-[300px] w-full'>
 											<Image src={image} alt='crousel' fill className='object-cover object-center' />
 										</div>
 									))
@@ -259,4 +257,4 @@ const index = (props: Props) => {
 	)
 }
 
-export default index
+export default Homepage

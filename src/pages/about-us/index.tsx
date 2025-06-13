@@ -4,9 +4,8 @@ import { useLanguage } from '@/providers/LanguageProvider'
 import { ALL_IMAGES, METAS } from '@/utils/constants'
 import Image from 'next/image'
 import React from 'react'
-type Props = {}
 
-const AboutPage = (props: Props) => {
+const AboutPage = () => {
     const { lang, locale } = useLanguage()
     return (
         <Master

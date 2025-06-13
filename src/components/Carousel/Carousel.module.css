@@ -1,0 +1,41 @@
+.dots {
+    overflow: auto;
+}
+
+.dots>* {
+    margin-left: 6px;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+.dot>*:first-child {
+    margin-left: 0;
+}
+
+.dots>.active {
+    width: 29px;
+    height: 6px;
+    background-color: #534032;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.dots>.passive {
+    width: 6px;
+    height: 6px;
+    background-color: #BCBCBC99;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.dots>.far {
+    width: 0px;
+    height: 0px;
+    background-color: #BCBCBC99;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: none;
+    margin-left: 0px !important;
+    position: absolute;
+}

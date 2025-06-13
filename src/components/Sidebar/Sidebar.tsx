@@ -3,6 +3,7 @@ import { LINKS } from '@/utils/constants'
 import Link from 'next/link'
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
+import LanguageSwitcher from '../LanguageSwitcher'
 
 const Sidebar = () => {
     const { isOpen, toggleOpen } = useSidebar()
@@ -20,6 +21,7 @@ const Sidebar = () => {
                             </Link>
                         ))
                     }
+                    <LanguageSwitcher />
                 </div>
             </div>
         </div>

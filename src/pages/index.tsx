@@ -1,4 +1,5 @@
 import Carousel from '@/components/Carousel/Carousel'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 import Master from '@/components/Master'
 import Title from '@/components/Title'
 import { useLanguage } from '@/providers/LanguageProvider'
@@ -92,12 +93,13 @@ const Homepage = () => {
 											</Link>
 										))
 									}
+									<LanguageSwitcher containerClassName='bg-neutral-700/30! border-transparent backdrop-blur-3xl ' />
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div className='relative block md:hidden h-auto mb-28'>
+					<div className='relative block md:hidden h-auto mb-10'>
 						<div className='absolute z-[2] h-auto py-5 bg-gradient-to-b from-black/70 to-transparent top-0 inset-x-0'>
 							<div className='md:mx-auto max-w-5xl mx-7 text-white 0 py-5 flex flex-row justify-between items-center'>
 								<Link href={"/"}>
@@ -111,17 +113,19 @@ const Homepage = () => {
 								</button>
 							</div>
 						</div>
-						<div className='relative aspect-square flex-1'>
-							<div className='backdrop-blur-lg'></div>
-							<Image
-								src={'/static/images/jpg/background.jpg'}
-								layout='fill'
-								objectFit='cover'
-								alt='Background Image'
-								loading='lazy'
-							/>
+						<div className='absolute inset-x-0 top-0 h-[60vh] flex-1'>
+							<div className='relative h-full w-full'>
+								<div className='backdrop-blur-lg'></div>
+								<Image
+									src={'/static/images/jpg/background.jpg'}
+									layout='fill'
+									objectFit='cover'
+									alt='Background Image'
+									loading='lazy'
+								/>
+							</div>
 						</div>
-						<div className='absolute top-20 flex items-center justify-center'>
+						<div className='relative top-20 flex items-center justify-center'>
 							<div className='md:mx-auto max-w-5xl text-white rounded-3xl'>
 								<div className='py-10 md:px-12 px-5'>
 									<h1 className='text-white text-4xl mb-5 font-semibold'>Pure Oud Pure Excellent</h1>

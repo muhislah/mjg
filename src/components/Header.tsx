@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import { FaLeaf } from 'react-icons/fa6'
 import { GiHamburgerMenu } from 'react-icons/gi'
+import LanguageSwitcher from './LanguageSwitcher'
 
 
 const Header = () => {
@@ -27,6 +28,7 @@ const Header = () => {
                             </Link>
                         ))
                     }
+                    <LanguageSwitcher />
                 </div>
                 <div className='flex md:hidden flex-row items-center gap-5 ml-auto'>
                     <button onClick={toggleOpen}>

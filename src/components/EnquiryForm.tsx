@@ -149,11 +149,11 @@ const EnquiryForm = (props: Props) => {
                 placeholder='Enter description Here'
             />
             <button
-                className='flex items-center justify-center px-3 py-1.5 gap-2 disabled:bg-yellow-800 rounded-lg bg-yellow-900 text-white'
+                className='flex items-center justify-center px-3 py-1.5 gap-2 disabled:bg-yellow-900/50 rounded-lg bg-yellow-900 text-white'
                 onClick={handleSubmit}
                 disabled={isLoading}
             >
-                {isLoading ? "Submitting" : "Submit"}
+                {isLoading ? "Submitting..." : "Submit"}
             </button>
         </div>
     )

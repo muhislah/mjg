@@ -15,7 +15,7 @@ const Footer = () => {
                     </div>
                 </Link>
                 <div className='md:ml-auto'>
-                    <p>2023 &copy; CV. Muji Jaya Gaharu</p>
+                    <p>2023 &copy; PT. Muji Jaya Gaharu</p>
                 </div>
             </div>
         </footer>

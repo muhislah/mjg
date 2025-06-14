@@ -34,6 +34,7 @@ const initialState = {
 const EnquiryForm = (props: Props) => {
     const [state, setState] = useState<IState>(initialState)
     const [error, setError] = useState<IValidationErrors>({})
+    const [isLoading, setIsLoading] = useState(false)
     const handleChange = (name: string, value: string) => {
         const val = name === 'phone' ? value.replace(/[^0-9]/g, "") : value
         setState(prev => ({
@@ -66,18 +67,25 @@ const EnquiryForm = (props: Props) => {
             return
         }
 
-        const result = await fetch("/api/add-row", {
-            method: 'POST',
-            body: JSON.stringify({
-                ...state,
-                phone: `${state.dial_code}${state.phone}`
+        setIsLoading(true)
+        try {
+            const result = await fetch("/api/add-row", {
+                method: 'POST',
+                body: JSON.stringify({
+                    ...state,
+                    phone: `${state.dial_code}${state.phone.replace(/0/, "")}`
+                })
             })
-        })
-        if (result.status === 200) {
-            toast.success("Thanks for Your Submit, You Will be Contacted Soon")
-            if (props.onSuccessCallback) props.onSuccessCallback()
-        } else {
+            if (result.status === 200) {
+                toast.success("Thanks for Your Submit, You Will be Contacted Soon")
+                if (props.onSuccessCallback) props.onSuccessCallback()
+            } else {
+                toast.error("Something Error, Please contact admin!")
+            }
+        } catch (error) {
             toast.error("Something Error, Please contact admin!")
+        } finally {
+            setIsLoading(false)
         }
     }
 
@@ -140,10 +148,11 @@ const EnquiryForm = (props: Props) => {
                 placeholder='Enter description Here'
             />
             <button
-                className='flex items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-yellow-900 text-white'
+                className='flex items-center justify-center px-3 py-1.5 gap-2 disabled:bg-yellow-800 rounded-lg bg-yellow-900 text-white'
                 onClick={handleSubmit}
+                disabled={isLoading}
             >
-                Submit
+                {isLoading ? "Submitting" : "Submit"}
             </button>
         </div>
     )

@@ -3,9 +3,10 @@ import Master from '@/components/Master';
 import Title from '@/components/Title';
 import { useLanguage } from '@/providers/LanguageProvider';
 import { ALL_IMAGES, METAS } from '@/utils/constants';
-import { sendWhatsApp } from '@/utils/helper';
+import { openLink, sendWhatsApp } from '@/utils/helper';
 import React from 'react'
-import { FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaSnapchat } from 'react-icons/fa6';
 
 const ContactPage = () => {
     const { lang, locale } = useLanguage()
@@ -42,18 +43,41 @@ const ContactPage = () => {
                             </div>
                             <div className='flex flex-col md:flex-row items-center gap-2'>
                                 <button
-                                    className='flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
+                                    onClick={() => sendWhatsApp(`6285225611505`)}
+                                >
+                                    <FaWhatsapp />
+                                    +62 852-2561-1505
+                                </button>
+                                <button
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
                                     onClick={() => sendWhatsApp(`6285867417482`)}
                                 >
                                     <FaWhatsapp />
                                     +62 858-6741-7482
                                 </button>
                                 <button
-                                    className='flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
-                                    onClick={() => sendWhatsApp(`6285225611505`)}
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
+                                    onClick={() => sendWhatsApp(`6281222699001`)}
                                 >
                                     <FaWhatsapp />
-                                    +62 852-2561-1505
+                                    +62 812-2269-9001
+                                </button>
+                            </div>
+                            <div className='flex flex-col md:flex-row items-center gap-2'>
+                                <button
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-[#8134af] text-white'
+                                    onClick={() => openLink("https://www.instagram.com/abudaffa_aloud?igsh=MXgzcTJucWFyOTRp&utm_source=qr")}
+                                >
+                                    <FaInstagram />
+                                    @abudaffa_aloud
+                                </button>
+                                <button
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-yellow-400 text-black'
+                                    onClick={() => openLink("https://www.snapchat.com/add/abudaffaoud?src=QR_CODE")}
+                                >
+                                    <FaSnapchat />
+                                    abudaffaoud
                                 </button>
                             </div>
                             <button

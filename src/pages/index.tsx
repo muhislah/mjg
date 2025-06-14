@@ -66,7 +66,7 @@ const Homepage = () => {
 										</button>
 										<button
 											className='flex items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
-											onClick={() => sendWhatsApp(`6285213133384`)}
+											onClick={() => sendWhatsApp(`6285225611505`)}
 										>
 											<FaWhatsapp />
 											Whatsapp
@@ -142,7 +142,7 @@ const Homepage = () => {
 											</button>
 											<button
 												className='flex items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
-												onClick={() => sendWhatsApp(`6285213133384`)}
+												onClick={() => sendWhatsApp(`6285225611505`)}
 											>
 												<FaWhatsapp />
 												Whatsapp
@@ -248,7 +248,7 @@ const Homepage = () => {
 											<li>Garansi keaslian 100%</li>
 											<li>Kemasan premium dan aman</li>
 											<li>Layanan after-sales terpercaya</li>
-											<li>Pengiriman cepat ke seluruh Indonesia</li>
+											<li>Melayani Pengiriman seluruh Negara Arab Saudi</li>
 										</ol>
 									</span>
 								</div>

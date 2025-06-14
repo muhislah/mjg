@@ -176,7 +176,7 @@ const Homepage = () => {
 					<div className='md:mx-auto max-w-5xl mx-5 py-10'>
 						<Title>Why Choose Us ?</Title>
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-5 py-5'>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<FiAward className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
@@ -185,7 +185,7 @@ const Homepage = () => {
 									<span className='text-sm text-neutral-800'>Kami menggunakan pohon gaharu pilihan dengan usia minimal 15 tahun. Setiap batang dipilih langsung oleh ahli gaharu berpengalaman untuk memastikan kualitas resin terbaik yang menghasilkan aroma oud autentik dan mendalam.</span>
 								</div>
 							</div>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<MdOutlineHistory className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
@@ -194,7 +194,7 @@ const Homepage = () => {
 									<span className='text-sm text-neutral-800'>Menggabungkan teknik destilasi tradisional turun-temurun dengan teknologi modern untuk menghasilkan produk berkualitas konsisten. Proses ekstraksi dilakukan dengan sabar tanpa bahan kimia berbahaya.</span>
 								</div>
 							</div>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<IoShieldCheckmarkOutline className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
@@ -210,7 +210,7 @@ const Homepage = () => {
 									</span>
 								</div>
 							</div>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<GiTreeBranch className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
@@ -219,7 +219,7 @@ const Homepage = () => {
 									<span className='text-sm text-neutral-800'>Kami berkomitmen pada praktik harvesting yang bertanggung jawab. Bekerjasama dengan petani lokal untuk budidaya gaharu berkelanjutan, mendukung ekonomi masyarakat sambil melestarikan alam.</span>
 								</div>
 							</div>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<MdOutlineStarOutline className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
@@ -236,7 +236,7 @@ const Homepage = () => {
 								</div>
 
 							</div>
-							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5'>
+							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<FaHandsHelping className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>

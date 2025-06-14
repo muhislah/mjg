@@ -67,7 +67,7 @@ const ContactPage = () => {
                     </div>
                     <Title>{lang('maps')}</Title>
                     <div className='py-5'>
-                        <div className='border border-neutral-300 rounded-xl md:rounded-3xl overflow-hidden p-0 md:p-5 '>
+                        <div className='border border-neutral-300 rounded-xl md:rounded-3xl overflow-hidden p-0 md:p-5 bg-white'>
                             <iframe
                                 className='w-full rounded-xl'
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.783788161008!2d109.4717961!3d-6.9861847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdde64b034a8b%3A0xa9c0114af3312d5!2sPT.%20Muji%20Jaya%20Gaharu!5e0!3m2!1sid!2sid!4v1720675658260!5m2!1sid!2sid"
@@ -87,7 +87,7 @@ const ContactPage = () => {
                     </div>
                     <Title>{lang('marketing_office')}</Title>
                     <div className='py-5'>
-                        <div className='border border-neutral-300 rounded-xl md:rounded-3xl overflow-hidden p-0 md:p-5 '>
+                        <div className='border border-neutral-300 rounded-xl md:rounded-3xl overflow-hidden p-0 md:p-5 bg-white'>
                             <iframe
                                 className='w-full rounded-xl'
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4416.276088846118!2d106.6843316!3d-6.1440326999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9aa3c9f1fdf%3A0x290ddc1c7cc775e5!2sPT.MUJI%20JAYA%20GAHARU%20(%20ABU%20DAFFA%20OUD%20)!5e1!3m2!1sen!2sid!4v1749814491643!5m2!1sen!2sid"

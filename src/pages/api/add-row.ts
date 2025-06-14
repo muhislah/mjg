@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         });
 
-        const pretext = `Hallo ${name}, kami mau mengkonfirmasi terkait pesanan dengan: \nCode : "${product}"\nDeskripsi: ${description}\n  Apakah pesanan tersebut sudah benar?`
+        const pretext = `Hallo ${name}, kami mau mengkonfirmasi terkait pesanan dengan: \n\nCode : "${product}"\nDeskripsi: ${description}\n\nApakah pesanan tersebut sudah benar?`
         const followUpLink = `https://wa.me/${phone.replace('+', '')}?text=${encodeURIComponent(pretext)}`
 
         const sheets = google.sheets({ version: 'v4', auth });

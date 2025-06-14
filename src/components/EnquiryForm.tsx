@@ -84,6 +84,7 @@ const EnquiryForm = (props: Props) => {
             }
         } catch (error) {
             toast.error("Something Error, Please contact admin!")
+            console.error(error)
         } finally {
             setIsLoading(false)
         }

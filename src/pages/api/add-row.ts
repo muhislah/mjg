@@ -78,7 +78,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const range = 'Enquiries!A:G'; // Adjust based on your sheet
         const date = format(new Date(), 'dd-MM-yyyy HH:mm')
 
-        const result = await sheets.spreadsheets.values.append({
+        await sheets.spreadsheets.values.append({
             spreadsheetId,
             range,
             valueInputOption: 'USER_ENTERED',

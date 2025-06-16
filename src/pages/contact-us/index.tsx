@@ -11,7 +11,7 @@ import { FaSnapchat } from 'react-icons/fa6';
 const ContactPage = () => {
     const { lang, locale } = useLanguage()
     const handleSendEmail = (text: string = '') => {
-        const toEmail = 'mujijayagaharu01@gmail.com';
+        const toEmail = 'ptmujijayagaharuoud@gmail.com';
         const subject = 'Parthership in Bussiness';
         const body = text ? text : ''
 
@@ -85,7 +85,7 @@ const ContactPage = () => {
                                 onClick={() => handleSendEmail()}
                             >
                                 <FaEnvelope />
-                                mujijayagaharu01@gmail.com
+                                ptmujijayagaharuoud@gmail.com
                             </button>
                         </div>
                     </div>

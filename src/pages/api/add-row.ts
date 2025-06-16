@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { google } from 'googleapis';
 import { format } from 'date-fns';
+import nodemailer from 'nodemailer'
 
 type SheetRequestBody = {
     name: string;
@@ -10,6 +11,50 @@ type SheetRequestBody = {
     product: string;
     description: string
 };
+
+export const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "service.mujijayagaharu@gmail.com",
+        pass: process.env.GOOGLE_APP_PASSWORD,
+    },
+})
+
+interface IMailData {
+    to: string,
+    subject: string,
+}
+
+export const sendMail = (data: IMailData & {
+    date: string,
+    name: string,
+    email: string,
+    phone: string,
+    followUpLink: string,
+    product: string,
+    description: string
+}) => {
+    const message = {
+        from: "service.mujijayagaharu@gmail.com",
+        to: data.to,
+        subject: data.subject,
+        text: "Ada order baru",
+        html: `
+            <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+                <h2 style="color: #2c3e50;">📦 Order Baru</h2>
+                <p><strong>Tanggal:</strong> ${data.date}</p>
+                <p><strong>Nama:</strong> ${data.name}</p>
+                <p><strong>Email:</strong> ${data.email}</p>
+                <p><strong>Telepon:</strong> ${data.phone}</p>
+                <p><strong>Produk:</strong> ${data.product}</p>
+                <p><strong>Deskripsi:</strong><br/> ${data.description}</p>
+                <p><strong>Tindak Lanjut:</strong> <a href="${data.followUpLink}" target="_blank">Klik di sini</a></p>
+            </div>
+        `
+    }
+
+    return transporter.sendMail(message);
+}
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
@@ -33,7 +78,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const range = 'Enquiries!A:G'; // Adjust based on your sheet
         const date = format(new Date(), 'dd-MM-yyyy HH:mm')
 
-        await sheets.spreadsheets.values.append({
+        const result = await sheets.spreadsheets.values.append({
             spreadsheetId,
             range,
             valueInputOption: 'USER_ENTERED',
@@ -41,6 +86,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 values: [[date, name, email, phone, followUpLink, product, description]],
             },
         });
+
+        await sendMail({
+            date,
+            description,
+            email,
+            followUpLink,
+            name,
+            phone,
+            product,
+            subject: "Ada Order Masuk",
+            to: `ptmujijayagaharuoud@gmail.com`
+        })
 
         return res.status(200).json({ message: 'Row added successfully.' });
     } catch (err) {

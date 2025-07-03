@@ -63,6 +63,13 @@ const ContactPage = () => {
                                     <FaWhatsapp />
                                     +62 812-2269-9001
                                 </button>
+                                <button
+                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
+                                    onClick={() => sendWhatsApp(`966560455091`)}
+                                >
+                                    <FaWhatsapp />
+                                    +966560455091
+                                </button>
                             </div>
                             <div className='flex flex-col md:flex-row items-center gap-2'>
                                 <button

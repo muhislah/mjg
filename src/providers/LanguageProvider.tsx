@@ -18,6 +18,7 @@ type Value = {
 
 export const LanguageProvider = (props: IProps) => {
     const { locale = 'id' } = useRouter()
+    const direction = locale === 'ar' ? "rtl" : "ltr"
 
     /**
      * Get localized 
@@ -56,7 +57,9 @@ export const LanguageProvider = (props: IProps) => {
 
     return (
         <LanguageContext.Provider value={{ locale, lang, generateUrl }}>
-            {props.children}
+            <div dir={direction}>
+                {props.children}
+            </div>
         </LanguageContext.Provider>
     )
 }

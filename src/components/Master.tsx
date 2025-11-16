@@ -36,9 +36,6 @@ const Master = (props: IProps) => {
                 <meta name="author" content="Abu Daffa" />
                 <meta name="keywords" content="oud, oud, oak, gaharu, oud gaharu, minyak, keharuman gaharu, kualitas gaharu" />
 
-                {/* TODO: change meta data */}
-                {/* <meta name="twitter:site" content="@cariproperti" />
-                <meta name="twitter:creator" content="@cariproperti" /> */}
                 <meta name="twitter:title" content={props.title} />
                 <meta name="twitter:description" content={props.description || 'Temukan kualitas terbaik gaharu di PT Muji Jaya Gaharu. Kami menyediakan berbagai produk gaharu dari sumber terpercaya dengan keharuman yang alami dan mendalam. Hubungi kami untuk informasi lebih lanjut dan penawaran spesial.'} />
                 <meta name="twitter:image" content={props.image || "/static/images/png/logo.png"} />
@@ -62,7 +59,7 @@ const Master = (props: IProps) => {
 
                 <link rel="preconnect" href="https://www.google-analytics.com" />
             </Head>
-            <main className='font-["Raleway"]'>
+            <main className='font-["Raleway"] rtl:font-["Rubik"]'>
                 {
                     props.noHeader ?
                         null :

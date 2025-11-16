@@ -2,12 +2,13 @@ import DirectEnquiryModal from '@/components/DirectEnquiryModal'
 import Master from '@/components/Master'
 import Title from '@/components/Title'
 import { useLanguage } from '@/providers/LanguageProvider'
-import { ALL_PRODUCT, METAS } from '@/utils/constants'
+import { METAS, NEW_PRODUCTS } from '@/utils/constants'
+import { createSlugFromName } from '@/utils/helper'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
 const ProductsPage = () => {
-    const { locale } = useLanguage()
+    const { locale, lang } = useLanguage()
     const [selectedProduct, setSelectedProduct] = useState('')
 
     return (
@@ -18,13 +19,13 @@ const ProductsPage = () => {
         >
             <div className='md:max-w-5xl md:mx-auto mx-5'>
                 <div className='py-10'>
-                    <Title>Our Products</Title>
+                    <Title>{lang("our_product")}</Title>
                     <div className='grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 py-5'>
                         {
-                            ALL_PRODUCT.map((product) => (
-                                <div className='shadow-lg rounded-xl' key={product.id}>
+                            NEW_PRODUCTS.map((product) => (
+                                <div className='shadow-lg rounded-xl' key={createSlugFromName(product.name)}>
                                     <div className="overflow-visible p-0">
-                                        <div className='relative aspect-square'>
+                                        <div className='relative aspect-[3/4]'>
                                             <Image
                                                 fill
                                                 alt={"oud"}
@@ -39,10 +40,10 @@ const ProductsPage = () => {
                                         <button
                                             className='bg-yellow-700 text-sm cursor-pointer hover:bg-yellow-950 text-white px-3 py-1 rounded-md'
                                             onClick={() => {
-                                                setSelectedProduct(product.id)
+                                                setSelectedProduct(createSlugFromName(product.name))
                                             }}
                                         >
-                                            Order
+                                            {lang("order")}
                                         </button>
                                     </div>
                                 </div>

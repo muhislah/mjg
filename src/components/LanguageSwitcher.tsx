@@ -67,7 +67,7 @@ const LanguageSwitcher = (props: Props) => {
                     English
                 </Link>
                 <Link href='/' locale='ar' className='hover:text-yellow-700 font-semibold'>
-                    Arabic
+                    العربية
                 </Link>
             </div>
         </div>

@@ -236,7 +236,7 @@ const Carousel = ({ show, children, sliderClass, isRepeatedProps, withIndicator,
                         : null
                 }
                 <div className="overflow-hidden lg:p-0 h-full w-full" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-                    <div onTransitionEnd={() => handleTransitionEnd()} className={`flex ${transitionEnabled ? 'transition-all' : 'transition-none'} duration-300 ease-in-out ${sliderClass || ''} no-scrollbar-all`} style={{ transform: `translateX(calc(-${state.activeIndex * (100 / show)}% + ${(sliderOffset || 0) * state.activeIndex}px))` }}>
+                    <div onTransitionEnd={() => handleTransitionEnd()} className={`flex flex-row rtl:flex-row-reverse ${transitionEnabled ? 'transition-all' : 'transition-none'} duration-300 ease-in-out ${sliderClass || ''} no-scrollbar-all`} style={{ transform: `translateX(calc(-${state.activeIndex * (100 / show)}% + ${(sliderOffset || 0) * state.activeIndex}px))` }}>
                         {
                             (length > show && isRepeated) &&
                             renderExtraPrev()
@@ -266,7 +266,7 @@ const Carousel = ({ show, children, sliderClass, isRepeatedProps, withIndicator,
             </div>
             {
                 withIndicator &&
-                <div ref={indicatorRef} className={`flex flex-row items-center mx-auto no-scrollbar-all ${indicatorContainerClasses} ${indicatorSpacing} ${classes.dots}`}>
+                <div ref={indicatorRef} className={`flex flex-row rtl:flex-row-reverse items-center mx-auto no-scrollbar-all ${indicatorContainerClasses} ${indicatorSpacing} ${classes.dots}`}>
                     {
                         renderDots()
                     }

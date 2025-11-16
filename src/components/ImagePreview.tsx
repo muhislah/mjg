@@ -36,15 +36,24 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({ isOpen, image, onClose }) =
 
             <div className="relative max-h-[80vh] max-w-full overflow-auto rounded-lg shadow-lg bg-white dark:bg-gray-900">
                 <div className="relative w-fit h-fit max-h-[80vh] max-w-full">
-                    <Image
-                        src={image || ''}
-                        alt="Preview"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="h-auto max-h-[80vh] w-auto max-w-full rounded-md object-contain"
-                        unoptimized
-                    />
+                    {
+                        image.endsWith("mp4") ?
+                            < video
+                                className="object-cover max-w-full h-full rounded-lg"
+                                src={image}
+                                autoPlay
+                                muted
+                            /> :
+                            <Image
+                                src={image || ''}
+                                alt="Preview"
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                className="h-auto max-h-[80vh] w-auto max-w-full rounded-md object-contain"
+                                unoptimized
+                            />
+                    }
                 </div>
             </div>
         </div>

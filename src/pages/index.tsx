@@ -2,7 +2,7 @@ import Carousel from '@/components/Carousel/Carousel'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import Master from '@/components/Master'
 import Title from '@/components/Title'
-import { useLanguage } from '@/providers/LanguageProvider'
+import { IDict, useLanguage } from '@/providers/LanguageProvider'
 import { useSidebar } from '@/providers/SidebarProvider'
 import { ALL_IMAGES, LINKS, METAS } from '@/utils/constants'
 import { sendWhatsApp } from '@/utils/helper'
@@ -45,15 +45,15 @@ const Homepage = () => {
 						<div className='absolute inset-0 z-10 flex items-center justify-center'>
 							<div className='md:mx-auto max-w-5xl text-white bg-black/10 backdrop-blur-xs rounded-3xl'>
 								<div className='py-10 md:px-12 px-5'>
-									<h1 className='text-white text-5xl mb-5 font-semibold'>Pure Oud Pure Excellent</h1>
+									<h1 className='text-white text-5xl mb-5 font-semibold'>{lang("title")}</h1>
 									<div className='md:text-base text-sm'>
-										<figcaption className='my-2 text-justify'>
+										<figcaption className='my-2 text-justify rtl:text-right'>
 											{lang('oud_description1')}
 										</figcaption>
-										<figcaption className='my-2 text-justify'>
+										<figcaption className='my-2 text-justify rtl:text-right'>
 											{lang('oud_description2')}
 										</figcaption>
-										<figcaption className='my-2 text-justify'>
+										<figcaption className='my-2 text-justify rtl:text-right'>
 											{lang('oud_description3')}
 										</figcaption>
 									</div>
@@ -76,19 +76,19 @@ const Homepage = () => {
 							</div>
 						</div>
 						<div className='absolute z-20 h-auto py-5 bg-gradient-to-b from-black/70 to-transparent top-0 inset-x-0'>
-							<div className='md:mx-auto max-w-5xl mx-5  text-white px-10 py-5 flex flex-row items-center'>
+							<div className='md:mx-auto max-w-5xl mx-5 text-white px-10 py-5 flex flex-row items-center'>
 								<Link href={"/"}>
 									<div className='text-3xl font-charm font-black flex items-center gap-1'>
-										<p>Oud</p>
+										<p>{lang("oud")}</p>
 										<FaLeaf />
 									</div>
 								</Link>
-								<div className='flex flex-row items-center gap-5 ml-auto'>
+								<div className='flex flex-row items-center gap-5 ml-auto rtl:mr-auto rtl:ml-0'>
 									{
 										LINKS.map(link => (
 											<Link href={link.url} key={link.url}>
 												<div className='font-semibold hover:text-yellow-200'>
-													{link.name}
+													{lang(link.name as IDict)}
 												</div>
 											</Link>
 										))
@@ -104,7 +104,7 @@ const Homepage = () => {
 							<div className='md:mx-auto max-w-5xl mx-7 text-white 0 py-5 flex flex-row justify-between items-center'>
 								<Link href={"/"}>
 									<div className='text-3xl font-charm font-black flex items-center gap-1'>
-										<p>Oud</p>
+										<p>{lang("oud")}</p>
 										<FaLeaf />
 									</div>
 								</Link>
@@ -155,7 +155,7 @@ const Homepage = () => {
 					</div>
 
 					<div className='md:mx-auto max-w-5xl mx-5 pt-10'>
-						<Title>Our Product</Title>
+						<Title>{lang("our_product")}</Title>
 						<div className='w-full py-5'>
 							<Carousel
 								show={1}
@@ -174,15 +174,15 @@ const Homepage = () => {
 						</div>
 					</div>
 					<div className='md:mx-auto max-w-5xl mx-5 py-10'>
-						<Title>Why Choose Us ?</Title>
+						<Title>{lang("why_choose_us")}</Title>
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-5 py-5'>
 							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
 								<div className='text-yellow-900 w-full md:w-[100px] mb-2 md:mb-0 flex-shrink-0 flex flex-col justify-center md:h-full'>
 									<FiAward className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Kualitas Premium Terjamin</p>
-									<span className='text-sm text-neutral-800'>Kami menggunakan pohon gaharu pilihan dengan usia minimal 15 tahun. Setiap batang dipilih langsung oleh ahli gaharu berpengalaman untuk memastikan kualitas resin terbaik yang menghasilkan aroma oud autentik dan mendalam.</span>
+									<p className='font-bold text-lg'>{lang("premium_quality_title")}</p>
+									<span className='text-sm text-neutral-800'>{lang("premium_quality_desc")}</span>
 								</div>
 							</div>
 							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
@@ -190,8 +190,8 @@ const Homepage = () => {
 									<MdOutlineHistory className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Proses Tradisional Modern</p>
-									<span className='text-sm text-neutral-800'>Menggabungkan teknik destilasi tradisional turun-temurun dengan teknologi modern untuk menghasilkan produk berkualitas konsisten. Proses ekstraksi dilakukan dengan sabar tanpa bahan kimia berbahaya.</span>
+									<p className='font-bold text-lg'>{lang("traditional_process_title")}</p>
+									<span className='text-sm text-neutral-800'>{lang("traditional_process_desc")}</span>
 								</div>
 							</div>
 							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
@@ -199,13 +199,13 @@ const Homepage = () => {
 									<IoShieldCheckmarkOutline className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Sertifikasi & Standar Internasional</p>
+									<p className='font-bold text-lg'>{lang("certification_title")}</p>
 									<span className='text-sm text-neutral-800'>
 										<ol>
-											<li>Tersertifikasi CITES untuk perdagangan gaharu legal</li>
-											<li>Memenuhi standar kualitas internasional</li>
-											<li>Telah lolos uji laboratorium independen</li>
-											<li>Produk halal dan natural 100%</li>
+											<li>{lang("certification_list")[0]}</li>
+											<li>{lang("certification_list")[1]}</li>
+											<li>{lang("certification_list")[2]}</li>
+											<li>{lang("certification_list")[3]}</li>
 										</ol>
 									</span>
 								</div>
@@ -215,8 +215,8 @@ const Homepage = () => {
 									<GiTreeBranch className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Sumber Berkelanjutan</p>
-									<span className='text-sm text-neutral-800'>Kami berkomitmen pada praktik harvesting yang bertanggung jawab. Bekerjasama dengan petani lokal untuk budidaya gaharu berkelanjutan, mendukung ekonomi masyarakat sambil melestarikan alam.</span>
+									<p className='font-bold text-lg'>{lang("sustainable_source_title")}</p>
+									<span className='text-sm text-neutral-800'>{lang("sustainable_source_desc")}</span>
 								</div>
 							</div>
 							<div className='flex flex-col md:flex-row items-start border border-neutral-300 rounded-xl p-5 bg-white'>
@@ -224,13 +224,13 @@ const Homepage = () => {
 									<MdOutlineStarOutline className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Koleksi Eksklusif</p>
-									<span className='text-sm text-neutral-800'>Dari grade premium hingga super premium, setiap produk kami memiliki karakter aroma unik. Cocok untuk:
+									<p className='font-bold text-lg'>{lang("exclusive_collection_title")}</p>
+									<span className='text-sm text-neutral-800'>{lang("exclusive_collection_desc")}
 										<ol>
-											<li>Koleksi pribadi</li>
-											<li>Terapi aromaterapi</li>
-											<li>Keperluan spiritual</li>
-											<li>Hadiah eksklusif</li>
+											<li>{lang("exclusive_collection_list")[0]}</li>
+											<li>{lang("exclusive_collection_list")[1]}</li>
+											<li>{lang("exclusive_collection_list")[2]}</li>
+											<li>{lang("exclusive_collection_list")[3]}</li>
 										</ol>
 									</span>
 								</div>
@@ -241,14 +241,14 @@ const Homepage = () => {
 									<FaHandsHelping className='text-yellow-600 text-center text-[50px] md:text-[70px]' />
 								</div>
 								<div className=''>
-									<p className='font-bold text-lg'>Pengalaman Pelanggan Terbaik</p>
+									<p className='font-bold text-lg'>{lang("best_experience_title")}</p>
 									<span className='text-sm text-neutral-800'>
 										<ol>
-											<li>Konsultasi gratis dengan expert oud</li>
-											<li>Garansi keaslian 100%</li>
-											<li>Kemasan premium dan aman</li>
-											<li>Layanan after-sales terpercaya</li>
-											<li>Melayani Pengiriman seluruh Negara Arab Saudi</li>
+											<li>{lang("best_experience_list")[0]}</li>
+											<li>{lang("best_experience_list")[1]}</li>
+											<li>{lang("best_experience_list")[2]}</li>
+											<li>{lang("best_experience_list")[3]}</li>
+											<li>{lang("best_experience_list")[4]}</li>
 										</ol>
 									</span>
 								</div>

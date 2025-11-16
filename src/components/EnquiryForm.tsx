@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react'
 import TextInput from './form/TextInput'
 import { IValidationAlias, IValidationErrors, IValidationRules, validateData } from '@/utils/validation'
 import Select from './form/Select'
-import { ALL_PRODUCT } from '@/utils/constants'
+import { NEW_PRODUCTS } from '@/utils/constants'
 import PhoneInput from './form/PhoneInput'
 import TextArea from './form/TextArea'
 import { toast } from 'react-toastify'
+import { createSlugFromName } from '@/utils/helper'
+import { useLanguage } from '@/providers/LanguageProvider'
 
 type Props = {
     defaultState?: Partial<IState>
@@ -32,6 +34,7 @@ const initialState = {
 }
 
 const EnquiryForm = (props: Props) => {
+    const { lang } = useLanguage()
     const [state, setState] = useState<IState>(initialState)
     const [error, setError] = useState<IValidationErrors>({})
     const [isLoading, setIsLoading] = useState(false)
@@ -63,7 +66,7 @@ const EnquiryForm = (props: Props) => {
         const { isValid, errors } = validateData(state, validationRules, validationAlias)
         if (!isValid) {
             setError(errors)
-            toast.error("Please fill every form!")
+            toast.error(lang("please_fill_every_form"))
             return
         }
 
@@ -77,13 +80,13 @@ const EnquiryForm = (props: Props) => {
                 })
             })
             if (result.status === 200) {
-                toast.success("Thanks for Your Submit, You Will be Contacted Soon")
+                toast.success(lang("submit_success"))
                 if (props.onSuccessCallback) props.onSuccessCallback()
             } else {
-                toast.error("Something Error, Please contact admin!")
+                toast.error(lang("submit_error"))
             }
         } catch (error) {
-            toast.error("Something Error, Please contact admin!")
+            toast.error(lang("submit_error"))
             console.error(error)
         } finally {
             setIsLoading(false)
@@ -109,51 +112,51 @@ const EnquiryForm = (props: Props) => {
         <div className='flex flex-col gap-3 items-stretch'>
             <TextInput
                 name='name'
-                label='Name'
+                label={lang("name_label")}
                 value={state.name}
                 error={error.name}
                 onChange={handleChange}
-                placeholder='Enter Name Here'
+                placeholder={lang("name_placeholder")}
             />
             <TextInput
                 name='email'
-                label='Email'
+                label={lang("email_label")}
                 value={state.email}
                 error={error.email}
                 onChange={handleChange}
-                placeholder='Enter email Here'
+                placeholder={lang("email_placeholder")}
             />
             <Select
                 name='product'
-                label='Product'
+                label={lang("product_label")}
                 value={state.product}
                 onChange={handleChange}
-                options={ALL_PRODUCT.map(product => ({ label: product.name, value: product.id }))}
+                options={NEW_PRODUCTS.map(product => ({ label: product.name, value: createSlugFromName(product.name) }))}
             />
             <PhoneInput
                 name='phone'
-                label='Phone'
+                label={lang("phone_label")}
                 dialCode={state.dial_code}
                 value={state.phone}
                 onChangeDialCode={(value) => handleChange("dial_code", value)}
                 error={error.phone}
                 onChange={handleChange}
-                placeholder='Enter phone Here'
+                placeholder={lang('phone_placeholder')}
             />
             <TextArea
                 name='description'
-                label='Description'
+                label={lang("description_label")}
                 value={state.description}
                 error={error.description}
                 onChange={handleChange}
-                placeholder='Enter description Here'
+                placeholder={lang("description_placeholder")}
             />
             <button
                 className='flex items-center justify-center px-3 py-1.5 gap-2 disabled:bg-yellow-900/50 rounded-lg bg-yellow-900 text-white'
                 onClick={handleSubmit}
                 disabled={isLoading}
             >
-                {isLoading ? "Submitting..." : "Submit"}
+                {isLoading ? lang("submitting") : lang("submit")}
             </button>
         </div>
     )

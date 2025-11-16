@@ -14,3 +14,7 @@ export const openLink = (url: string, isNewTab?: boolean) => {
     link.click()
     document.body.removeChild(link)
 }
+
+export const createSlugFromName = (name: string) => {
+    return name.split(" ").map((n) => n.toLowerCase()).join("-")
+}

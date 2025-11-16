@@ -7,7 +7,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 const GalleryPage = () => {
-    const { locale } = useLanguage()
+    const { locale, lang } = useLanguage()
     const [selectedImage, setSelectedImage] = useState('')
 
     const renderImage = (images: string[]) => {
@@ -17,10 +17,10 @@ const GalleryPage = () => {
                     images.map(image => {
                         if (image.endsWith('mp4')) {
                             return (
-                                <div key={image} className='mb-4'>
+                                <div key={image} className='mb-4 aspect-square'>
                                     <video
                                         onClick={() => setSelectedImage(image)}
-                                        className="object-contain max-w-full rounded-lg"
+                                        className="object-cover max-w-full h-full rounded-lg"
                                         src={image}
                                         autoPlay
                                         muted
@@ -55,36 +55,36 @@ const GalleryPage = () => {
         >
             <div className='md:max-w-5xl md:mx-auto mx-5'>
                 <div className='py-10'>
-                    <Title>Muji Jaya Gaharu Team</Title>
+                    {/* <Title>Muji Jaya Gaharu Team</Title>
                     <div className='py-5'>
                         <video className='rounded-lg w-full' src={ALL_IMAGES.video[0]} controls autoPlay>
                         </video>
-                    </div>
-                    <Title>Export Gallery</Title>
+                    </div> */}
+                    <Title>{lang("export_gallery")}</Title>
                     <div className='py-5'>
                         {
                             renderImage(ALL_IMAGES.export)
                         }
                     </div>
-                    <Title>Product Gallery</Title>
+                    {/* <Title>Product Gallery</Title>
                     <div className='py-5'>
                         {
                             renderImage(ALL_IMAGES.product)
                         }
-                    </div>
-                    <Title>Activity Gallery</Title>
+                    </div> */}
+                    <Title>{lang("activity_gallery")}</Title>
                     <div className='py-5'>
                         {
                             renderImage(ALL_IMAGES.activity)
                         }
                     </div>
-                    <Title>Marketing Office Gallery</Title>
+                    <Title>{lang("marketing_gallery")}</Title>
                     <div className='py-5'>
                         {
                             renderImage(ALL_IMAGES.marketing_office)
                         }
                     </div>
-                    <Title>Another Gallery</Title>
+                    <Title>{lang("another_gallery")}</Title>
                     <div className='py-5'>
                         {
                             renderImage(ALL_IMAGES.other)

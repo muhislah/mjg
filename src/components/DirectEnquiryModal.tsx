@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import EnquiryForm from './EnquiryForm'
+import { useLanguage } from '@/providers/LanguageProvider'
 
 type Props = {
     isOpen: string
@@ -9,6 +10,7 @@ type Props = {
 
 const DirectEnquiryModal = (props: Props) => {
     const [redrawForm, setRedrawForm] = useState(0)
+    const { lang } = useLanguage()
     useEffect(() => {
         if (window) {
             if (props.isOpen) {
@@ -37,7 +39,7 @@ const DirectEnquiryModal = (props: Props) => {
             </button>
             <div className="w-4xl">
                 <div>
-                    <h2 className='mb-6 font-bold text-2xl'>Order Form</h2>
+                    <h2 className='mb-6 font-bold text-2xl'>{lang("order")}</h2>
                 </div>
                 <EnquiryForm
                     defaultState={{

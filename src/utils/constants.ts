@@ -104,10 +104,10 @@ export const ALL_IMAGES = {
 }
 
 export const LINKS = [
-    { name: 'Gallery', alt: 'Gallery Photo', url: '/gallery' },
-    { name: 'Products', alt: 'Products', url: '/products' },
-    { name: 'About', alt: 'About Us', url: '/about-us' },
-    { name: 'Contact', alt: 'Contact Us', url: '/contact-us' },
+    { name: 'nav_gallery', alt: 'Gallery Photo', url: '/gallery' },
+    { name: 'nav_products', alt: 'Products', url: '/products' },
+    { name: 'nav_about', alt: 'About Us', url: '/about-us' },
+    { name: 'nav_contact', alt: 'Contact Us', url: '/contact-us' },
 ]
 
 export const METAS = {
@@ -188,3 +188,143 @@ export const ALL_PRODUCT = Array.from({ length: 87 })
         url: `https://res.cloudinary.com/muhislah/image/upload/v1749524484/my-products/mjg-${(index + 1) < 10 ? `0${index + 1}` : `${index + 1}`}.jpg`
     }))
     .filter((product) => !excludeNumber.includes(product.number))
+
+
+export const NEW_PRODUCTS = [
+    {
+        "name": "G Merauke 119",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292090/new-product/g-merauka-119_Large_kbieaa.jpg"
+    },
+    {
+        "name": "G Rayap 93",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292088/new-product/g-rayap-93_Large_ijnddv.jpg"
+    },
+    {
+        "name": "G Merauke 117",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292088/new-product/g-merauke-117_Large_ek7bof.jpg"
+    },
+    {
+        "name": "G Kalimantan 03",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292087/new-product/Photoroom_20251106_030835_Large_odf68j.jpg"
+    },
+    {
+        "name": "G Sandal 96",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292087/new-product/Photoroom_20251106_033148_Large_wsdlna.jpg"
+    },
+    {
+        "name": "G Dugah Merauke 131",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292087/new-product/Photoroom_20251106_034621_Large_txoomc.jpg"
+    },
+    {
+        "name": "G Merauke 105",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292086/new-product/Photoroom_20251106_040054_Large_hgexip.jpg"
+    },
+    {
+        "name": "G Merauke 97",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292085/new-product/Photoroom_20251106_043240_Large_z9dseg.jpg"
+    },
+    {
+        "name": "G Dugah 133",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292085/new-product/Photoroom_20251106_043614_Large_pykmpw.jpg"
+    },
+    {
+        "name": "G Merauke Loreng 47",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292084/new-product/Photoroom_20251106_044047_Large_b1gysy.jpg"
+    },
+    {
+        "name": "G Merauke 137",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292084/new-product/Photoroom_20251106_044331_Large_njmagk.jpg"
+    },
+    {
+        "name": "G Kalimantan 21",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292083/new-product/Photoroom_20251106_045604_Large_tsgw8b.jpg"
+    },
+    {
+        "name": "G Kalimantan 85",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292082/new-product/Photoroom_20251109_211621_Large_yk5jkq.jpg"
+    },
+    {
+        "name": "G Kalimantan 07",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292082/new-product/Photoroom_20251109_211959_Large_xqjjts.jpg"
+    },
+    {
+        "name": "G Kalimantan 92",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292081/new-product/Photoroom_20251109_214045_Large_mqe50l.jpg"
+    },
+    {
+        "name": "G Merauke 127",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292081/new-product/Photoroom_20251109_213124_Large_x0tf79.jpg"
+    },
+    {
+        "name": "G Rayap 126",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292081/new-product/Photoroom_20251109_213439_Large_wnf6q4.jpg"
+    },
+    {
+        "name": "G Amunisi 06",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292080/new-product/Photoroom_20251110_151921_Large_nc31nn.jpg"
+    },
+    {
+        "name": "G Kalimantan 63",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292080/new-product/Photoroom_20251110_193743_Large_bh8mup.jpg"
+    },
+    {
+        "name": "G Merauke 115K",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292080/new-product/Photoroom_20251110_223115_Large_irn7jt.jpg"
+    },
+    {
+        "name": "G Merauke 113",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292079/new-product/Photoroom_20251110_223407_Large_mywzvj.jpg"
+    },
+    {
+        "name": "G Kalimantan 112",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292079/new-product/Photoroom_20251110_224121_Large_zj3oa4.jpg"
+    },
+    {
+        "name": "G Merauke 114",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292078/new-product/Photoroom_20251110_224454_Large_ha9us4.jpg"
+    },
+    {
+        "name": "G Rayap 36",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292078/new-product/Photoroom_20251110_225109_Large_d76b7x.jpg"
+    },
+    {
+        "name": "G Merauke 115B",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292076/new-product/Photoroom_20251110_224815_Large_rswtde.jpg"
+    },
+    {
+        "name": "G Rayap 04",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292076/new-product/Photoroom_20251111_135522_Large_pt6xgy.jpg"
+    },
+    {
+        "name": "G Merauke 71",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292076/new-product/Photoroom_20251111_135824_Large_wzwrpe.jpg"
+    },
+    {
+        "name": "G Kalimantan 09",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292076/new-product/Photoroom_20251110_225411_Large_kuel7d.jpg"
+    },
+    {
+        "name": "G Kalimantan 123",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292075/new-product/Photoroom_20251111_140055_Large_gokspg.jpg"
+    },
+    {
+        "name": "G Double Super 94",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292075/new-product/Photoroom_20251111_142913_Large_i9bom6.jpg"
+    },
+    {
+        "name": "G Kalimantan 21",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292075/new-product/Photoroom_20251111_143651_Large_zb8cyl.jpg"
+    },
+    {
+        "name": "G Kalimantan 57",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292075/new-product/Photoroom_20251111_140312_Large_hu7nk1.jpg"
+    },
+    {
+        "name": "G Merauke 45",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292074/new-product/Photoroom_20251112_123035_Large_leoaju.jpg"
+    },
+    {
+        "name": "G Rayap 22",
+        "url": "https://res.cloudinary.com/muhislah/image/upload/v1763292074/new-product/Photoroom_20251111_143929_Large_ogz1vl.jpg"
+    }
+]

@@ -14,7 +14,7 @@ const GalleryPage = () => {
         return (
             <div className={`grid-cols-2 md:grid-cols-4 grid gap-2 md:gap-4`}>
                 {
-                    images.map(image => {
+                    images.map((image, index) => {
                         if (image.endsWith('mp4')) {
                             return (
                                 <div key={image} className='mb-4 aspect-square'>
@@ -30,6 +30,9 @@ const GalleryPage = () => {
                         } else {
                             return (
                                 <div key={image} className='mb-4 relative aspect-square'>
+                                    <div className='absolute inset-0 bg-black opacity-15 text-white z-10'>
+                                        {index + 1}
+                                    </div>
                                     <Image
                                         onClick={() => setSelectedImage(image)}
                                         className="object-cover max-w-full rounded-lg"

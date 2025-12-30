@@ -44,13 +44,6 @@ const ContactPage = () => {
                             <div className='flex flex-col md:flex-row items-center gap-2'>
                                 <button
                                     className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
-                                    onClick={() => sendWhatsApp(`6285225611505`)}
-                                >
-                                    <FaWhatsapp />
-                                    +62 852-2561-1505
-                                </button>
-                                <button
-                                    className='cursor-pointer flex text-sm items-center justify-center px-3 py-1.5 gap-2 rounded-lg bg-green-600 text-white'
                                     onClick={() => sendWhatsApp(`6281311974855`)}
                                 >
                                     <FaWhatsapp />
@@ -87,7 +80,7 @@ const ContactPage = () => {
                         <div className='border border-neutral-300 rounded-xl md:rounded-3xl overflow-hidden p-0 md:p-5 bg-white'>
                             <iframe
                                 className='w-full rounded-xl'
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.783788161008!2d109.4717961!3d-6.9861847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdde64b034a8b%3A0xa9c0114af3312d5!2sPT.%20Muji%20Jaya%20Gaharu!5e0!3m2!1sid!2sid!4v1720675658260!5m2!1sid!2sid"
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1259.7082948324787!2d109.47390037612374!3d-6.972010250462583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTgnMTkuNyJTIDEwOcKwMjgnMjYuMiJF!5e0!3m2!1sen!2sid!4v1767054336816!5m2!1sen!2sid"
                                 width="600"
                                 height="450"
                                 style={{ border: 0 }}

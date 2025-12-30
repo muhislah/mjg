@@ -32,7 +32,7 @@ export const ALL_IMAGES = {
     ],
     "activity": [
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156325/Activity/kdhqspgm9aiz7eqt1seh.jpg",
-        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156324/Activity/yuevxshtyrwvspwevfas.jpg",
+        // "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156324/Activity/yuevxshtyrwvspwevfas.jpg",
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156324/Activity/xerwbhmzxg3shlkcfuf1.jpg",
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156323/Activity/zwwlvcigynpd3emardi0.jpg",
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156321/Activity/nb2mfjizylujohwx2nak.jpg",
@@ -43,8 +43,13 @@ export const ALL_IMAGES = {
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/eyucd6ck5puu1l8str3m.jpg",
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/whjmvxqve32q4jc6lvkb.jpg",
         "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156323/Activity/pdytkv8yvdw9wkebgszd.jpg",
-        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/spvmj4wom43z7gzvjmwm.jpg",
-        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/wosmyoik8lvyhrkbw2dl.jpg"
+        // "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/spvmj4wom43z7gzvjmwm.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1705156319/Activity/wosmyoik8lvyhrkbw2dl.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1767055155/Gudang/gudang5_cvv6wq.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1767055156/Gudang/gudang1_wi1xm9.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1767055156/Gudang/gudang4_ngw0rl.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1767055156/Gudang/gudang3_iwc2an.jpg",
+        "https://res.cloudinary.com/muhislah/image/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1767055155/Gudang/gudang2_gxhqzg.jpg",
     ],
     "marketing_office": [
         "https://res.cloudinary.com/muhislah/video/upload/l_misc:uyicrom0whqqvyjjnnp0/c_scale,h_400,w_400/o_75/fl_layer_apply/v1722843004/marketing_office/nanhkfctji4p4g5g8bxu.mp4",
